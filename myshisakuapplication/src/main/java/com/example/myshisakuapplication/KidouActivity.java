@@ -1,3 +1,4 @@
+//敦也さんが打ちました
 package com.example.myshisakuapplication;
 
 import android.content.Intent;
@@ -20,6 +21,11 @@ import static android.R.id.title;
 
 public class KidouActivity extends AppCompatActivity {
 
+    private ImageView imageView ;
+    private Button Izubutton;
+    private Button Shizuokabutton;
+    private Button Hamamatsubutton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,24 +33,24 @@ public class KidouActivity extends AppCompatActivity {
 
 
         //試作背景画像
-        ImageView imageView = (ImageView)findViewById(R.id.backGroundImage);
+        imageView = (ImageView)findViewById(R.id.backGroundImage);
         imageView.setImageResource(R.drawable.haikei);
 
 
         //クリックイベントを取得したいボタン
 
         //伊豆ボタン
-        Button button = (Button)findViewById(R.id.button);
+        Izubutton = (Button)findViewById(R.id.Izubutton);
 
         //静岡ボタン
-        Button button2 = (Button)findViewById(R.id.button2);
+        Shizuokabutton = (Button)findViewById(R.id.Shizuokabutton);
 
         //浜松ボタン
-        Button button3 = (Button)findViewById(R.id.button3);
+        Hamamatsubutton = (Button)findViewById(R.id.Hamamatsubutton);
 
 
         // 伊豆ボタンをクリックしたとき
-        button.setOnClickListener(new View.OnClickListener() {
+        Izubutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplication(),MapsActivity.class);
@@ -58,7 +64,7 @@ public class KidouActivity extends AppCompatActivity {
         });
 
         //静岡ボタンをクリックしたとき
-        button2.setOnClickListener(new View.OnClickListener() {
+        Shizuokabutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),MapsActivity.class);
@@ -71,7 +77,7 @@ public class KidouActivity extends AppCompatActivity {
         });
 
         //浜松ボタンを押したとき
-        button3.setOnClickListener(new View.OnClickListener() {
+        Hamamatsubutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),MapsActivity.class);
