@@ -1,4 +1,3 @@
-//敦也さんが打ちました
 package com.example.myshisakuapplication;
 
 import android.content.Intent;
@@ -19,12 +18,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import static android.R.id.button2;
 import static android.R.id.title;
 
+
 public class KidouActivity extends AppCompatActivity {
 
-    private ImageView imageView ;
     private Button Izubutton;
-    private Button Shizuokabutton;
-    private Button Hamamatsubutton;
+    private Button Shizuoka;
+    private Button Hamamatsu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +32,7 @@ public class KidouActivity extends AppCompatActivity {
 
 
         //試作背景画像
-        imageView = (ImageView)findViewById(R.id.backGroundImage);
+        ImageView imageView = (ImageView)findViewById(R.id.backGroundImage);
         imageView.setImageResource(R.drawable.haikei);
 
 
@@ -43,10 +42,10 @@ public class KidouActivity extends AppCompatActivity {
         Izubutton = (Button)findViewById(R.id.Izubutton);
 
         //静岡ボタン
-        Shizuokabutton = (Button)findViewById(R.id.Shizuokabutton);
+        Shizuoka = (Button)findViewById(R.id.Shizuokabutton);
 
         //浜松ボタン
-        Hamamatsubutton = (Button)findViewById(R.id.Hamamatsubutton);
+        Hamamatsu = (Button)findViewById(R.id.Hamamatsubutton);
 
 
         // 伊豆ボタンをクリックしたとき
@@ -64,7 +63,7 @@ public class KidouActivity extends AppCompatActivity {
         });
 
         //静岡ボタンをクリックしたとき
-        Shizuokabutton.setOnClickListener(new View.OnClickListener() {
+        Shizuoka.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),MapsActivity.class);
@@ -77,7 +76,7 @@ public class KidouActivity extends AppCompatActivity {
         });
 
         //浜松ボタンを押したとき
-        Hamamatsubutton.setOnClickListener(new View.OnClickListener() {
+        Hamamatsu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),MapsActivity.class);
